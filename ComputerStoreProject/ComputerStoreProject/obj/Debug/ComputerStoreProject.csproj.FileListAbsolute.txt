@@ -1,0 +1,11 @@
+Z:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\bin\Debug\ComputerStoreProject.exe.config
+Z:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\bin\Debug\ComputerStoreProject.exe
+Z:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\bin\Debug\ComputerStoreProject.pdb
+Z:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.csproj.AssemblyReference.cache
+Z:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.fmLogin.resources
+Z:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.Properties.Resources.resources
+Z:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.csproj.GenerateResource.cache
+Z:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.csproj.CoreCompileInputs.cache
+Z:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.exe
+Z:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.pdb
+Z:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.AdminForm.resources

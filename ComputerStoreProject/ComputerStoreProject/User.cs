@@ -6,8 +6,23 @@ using System.Threading.Tasks;
 
 namespace ComputerStoreProject
 {
-    class User
+
+    public class User
     {
-        public string userID { get; set; }
+        public User()
+        {
+        }
+        public String uid { get; set; }
+        public String fullname { get; set; }
+        public String role { get; set; }
+
+        
+        public User(String userid, String username, String userrole)
+        {
+            uid = userid;
+            fullname = username;
+            role = userrole;
+        }
+
     }
 }
