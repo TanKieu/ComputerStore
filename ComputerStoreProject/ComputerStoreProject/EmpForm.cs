@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ComputerStoreProject
 {
-    public partial class Form1 : Form
+    public partial class EmpForm : Form
     {
-        public Form1()
+        public EmpForm()
         {
             InitializeComponent();
         }
