@@ -23,7 +23,8 @@ namespace ComputerStoreProject
 
         private void btnMngUser_Click(object sender, EventArgs e)
         {
-
+            ManageUser manageUserForm = new ManageUser();
+            manageUserForm.Show();
         }
 
         private void btnMngProduct_Click(object sender, EventArgs e)

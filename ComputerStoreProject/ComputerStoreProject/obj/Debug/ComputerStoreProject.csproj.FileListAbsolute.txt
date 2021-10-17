@@ -9,3 +9,17 @@ Z:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerSto
 Z:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.exe
 Z:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.pdb
 Z:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.AdminForm.resources
+W:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\bin\Debug\ComputerStoreProject.exe.config
+W:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\bin\Debug\ComputerStoreProject.exe
+W:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\bin\Debug\ComputerStoreProject.pdb
+W:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.csproj.AssemblyReference.cache
+W:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.AdminForm.resources
+W:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.EmpForm.resources
+W:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.fmLogin.resources
+W:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.Properties.Resources.resources
+W:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.csproj.GenerateResource.cache
+W:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.csproj.CoreCompileInputs.cache
+W:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.exe
+W:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.pdb
+W:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.ManageUser.resources
+W:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.frmUserDetails.resources

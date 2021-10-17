@@ -96,6 +96,7 @@ namespace ComputerStoreProject
             this.Controls.Add(this.btnMngUser);
             this.Controls.Add(this.label1);
             this.Name = "AdminForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminForm";
             this.Load += new System.EventHandler(this.AdminForm_Load);
             this.ResumeLayout(false);

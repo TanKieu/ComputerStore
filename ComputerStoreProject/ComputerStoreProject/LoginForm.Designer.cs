@@ -102,6 +102,7 @@ namespace ComputerStoreProject
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label1);
             this.Name = "fmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Computer Store";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
