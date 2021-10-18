@@ -29,7 +29,8 @@ namespace ComputerStoreProject
 
         private void btnMngProduct_Click(object sender, EventArgs e)
         {
-
+            ProductManage productManage = new ProductManage();
+            productManage.Show();
         }
 
         private void AdminForm_Load(object sender, EventArgs e)
