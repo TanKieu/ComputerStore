@@ -127,10 +127,23 @@ namespace ComputerStoreProject
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string productID = txtProductID.Text;
-            productDB.deleteProduct(productID);
-            DataRow row = dtProduct.Rows.Find(productID);
-            row.Delete();
+            DialogResult result = MessageBox.Show("Are you sure to delete","Confirm",MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                string productID = txtProductID.Text;
+                productDB.deleteProduct(productID);
+                DataRow row = dtProduct.Rows.Find(productID);
+                row.Delete();
+
+            }
+        }
+
+        private void txtNameSearch_TextChanged(object sender, EventArgs e)
+        {
+            DataView dv = dtProduct.DefaultView;
+            string filter = "product_name LIKE '%" + txtNameSearch.Text + "%'";
+            dv.RowFilter = filter;
+            lbResult.Text = "Total result : " + dtProduct.Compute("COUNT(product_id)",filter); 
         }
     }
 }

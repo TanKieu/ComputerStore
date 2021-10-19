@@ -49,6 +49,9 @@ namespace ComputerStoreProject
             this.bsProduct = new System.Windows.Forms.BindingSource(this.components);
             this.txtCategory = new System.Windows.Forms.TextBox();
             this.txtStatus = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbResult = new System.Windows.Forms.Label();
+            this.txtNameSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsProduct)).BeginInit();
             this.SuspendLayout();
@@ -207,11 +210,40 @@ namespace ComputerStoreProject
             this.txtStatus.Size = new System.Drawing.Size(179, 22);
             this.txtStatus.TabIndex = 21;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(39, 520);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(152, 17);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Enter name to search :";
+            // 
+            // lbResult
+            // 
+            this.lbResult.AutoSize = true;
+            this.lbResult.Location = new System.Drawing.Point(699, 520);
+            this.lbResult.Name = "lbResult";
+            this.lbResult.Size = new System.Drawing.Size(48, 17);
+            this.lbResult.TabIndex = 23;
+            this.lbResult.Text = "Result";
+            // 
+            // txtNameSearch
+            // 
+            this.txtNameSearch.Location = new System.Drawing.Point(194, 517);
+            this.txtNameSearch.Name = "txtNameSearch";
+            this.txtNameSearch.Size = new System.Drawing.Size(180, 22);
+            this.txtNameSearch.TabIndex = 24;
+            this.txtNameSearch.TextChanged += new System.EventHandler(this.txtNameSearch_TextChanged);
+            // 
             // ProductManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(905, 527);
+            this.ClientSize = new System.Drawing.Size(905, 557);
+            this.Controls.Add(this.txtNameSearch);
+            this.Controls.Add(this.lbResult);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.txtCategory);
             this.Controls.Add(this.btnDelete);
@@ -261,5 +293,8 @@ namespace ComputerStoreProject
         private System.Windows.Forms.BindingSource bsProduct;
         private System.Windows.Forms.TextBox txtCategory;
         private System.Windows.Forms.TextBox txtStatus;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbResult;
+        private System.Windows.Forms.TextBox txtNameSearch;
     }
 }
