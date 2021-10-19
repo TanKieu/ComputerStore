@@ -31,13 +31,13 @@ namespace ComputerStoreProject
 
             txtUid.DataBindings.Clear();
             txtName.DataBindings.Clear();
-            txtRole.DataBindings.Clear();
+            cbRole.DataBindings.Clear();
             txtUsername.DataBindings.Clear();
             txtPassword.DataBindings.Clear();
 
             txtUid.DataBindings.Add("Text", bsUser, "uid");
             txtName.DataBindings.Add("Text", bsUser, "staff_name");
-            txtRole.DataBindings.Add("Text", bsUser, "role");
+            cbRole.DataBindings.Add("Text", bsUser, "role");
             txtUsername.DataBindings.Add("Text", bsUser, "username");
             txtPassword.DataBindings.Add("Text", bsUser, "password");
 
@@ -66,6 +66,62 @@ namespace ComputerStoreProject
                 user = UserDetail.UserAddOrEdit;
                 dtUser.Rows.Add(user.uid, user.fullname, user.role, user.username, user.password);
             }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            String uid = txtUid.Text;
+            string name = txtName.Text;
+            string role = cbRole.Text;
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
+            User user = new User
+            {
+                uid = uid,
+                fullname = name,
+                role = role,
+                username = username,
+                password = password
+
+            };
+            frmUserDetails UserDetails = new frmUserDetails(false, user);
+            DialogResult r = UserDetails.ShowDialog();
+            if(r == DialogResult.OK)
+            {
+                DataRow row = dtUser.Rows.Find(user.uid);
+                row["staff_name"] = user.fullname;
+                row["role"] = user.role;
+                row["username"] = user.username;
+                row["password"] = user.password;
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            UserDB userDB = new UserDB();
+            string uid = txtUid.Text;
+            if (userDB.DeleteUser(uid))
+            {
+                DataRow row = dtUser.Rows.Find(uid);
+                dtUser.Rows.Remove(row);
+                MessageBox.Show("Delete Successfully");
+            }
+            else
+            {
+                MessageBox.Show("Delete Fail");
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            DataView dv = dtUser.DefaultView;
+            string filter = "staff_name LIKE '%" + txtSearch.Text + "%'";
+            dv.RowFilter = filter;
         }
     }
 }

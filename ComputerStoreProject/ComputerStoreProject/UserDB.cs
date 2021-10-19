@@ -90,5 +90,52 @@ namespace ComputerStoreProject
             }
             return result;
         }
+        public bool UpdateUser(User user)
+        {
+            bool result;
+            SqlConnection cnn = new SqlConnection(strConnection);
+            String SQL = "Update dbo.Account set username= @username, password = @password where uid = @uid  " +
+                "Update dbo.[User] set staff_name =@name, role=@role where uid =@uid";
+            SqlCommand cmd = new SqlCommand(SQL, cnn);
+            cmd.Parameters.AddWithValue("@uid", user.uid);
+            cmd.Parameters.AddWithValue("@username", user.username);
+            cmd.Parameters.AddWithValue("@password", user.password);
+            cmd.Parameters.AddWithValue("@name", user.fullname);
+            cmd.Parameters.AddWithValue("@role", user.role);
+            try
+            {
+                if(cnn.State == ConnectionState.Closed)
+                {
+                    cnn.Open();
+                }
+                result = cmd.ExecuteNonQuery() > 0;
+            }catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return result;
+        }
+        public bool DeleteUser(String uid)
+        {
+            bool result;
+            SqlConnection cnn = new SqlConnection(strConnection);
+            string SQL =  
+                " Delete dbo.[User] where uid = @uid" +
+                " Delete dbo.Account where uid = @uid";
+            SqlCommand cmd = new SqlCommand(SQL, cnn);
+            cmd.Parameters.AddWithValue("@uid", uid);
+            try
+            {
+                if(cnn.State == ConnectionState.Closed)
+                {
+                    cnn.Open();
+                }
+                result = cmd.ExecuteNonQuery() > 0;
+            }catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return result;
+        }
     }
 }
