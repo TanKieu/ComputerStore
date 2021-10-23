@@ -32,7 +32,7 @@ namespace ComputerStoreProject
             this.label1 = new System.Windows.Forms.Label();
             this.btnMngUser = new System.Windows.Forms.Button();
             this.btnMngProduct = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnSale = new System.Windows.Forms.Button();
             this.lbWelcome = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -66,14 +66,15 @@ namespace ComputerStoreProject
             this.btnMngProduct.UseVisualStyleBackColor = true;
             this.btnMngProduct.Click += new System.EventHandler(this.btnMngProduct_Click);
             // 
-            // button3
+            // btnSale
             // 
-            this.button3.Location = new System.Drawing.Point(516, 185);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(103, 42);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "button1";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSale.Location = new System.Drawing.Point(516, 185);
+            this.btnSale.Name = "btnSale";
+            this.btnSale.Size = new System.Drawing.Size(103, 42);
+            this.btnSale.TabIndex = 1;
+            this.btnSale.Text = "Sales";
+            this.btnSale.UseVisualStyleBackColor = true;
+            this.btnSale.Click += new System.EventHandler(this.btnSale_Click);
             // 
             // lbWelcome
             // 
@@ -91,7 +92,7 @@ namespace ComputerStoreProject
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(720, 450);
             this.Controls.Add(this.lbWelcome);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnSale);
             this.Controls.Add(this.btnMngProduct);
             this.Controls.Add(this.btnMngUser);
             this.Controls.Add(this.label1);
@@ -109,7 +110,7 @@ namespace ComputerStoreProject
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnMngUser;
         private System.Windows.Forms.Button btnMngProduct;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnSale;
         private System.Windows.Forms.Label lbWelcome;
     }
 }

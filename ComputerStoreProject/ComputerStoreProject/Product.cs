@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -59,6 +60,44 @@ namespace ComputerStoreProject
                 connection.Close();
             }
             return dtProduct;
+        }
+        public ArrayList getAllProductId()
+        {
+            ArrayList productIdList= new ArrayList();
+            String sql = "Select  product_id, product_name,quantity,category,costSold,price,dateModify,status From Product where status = @status";
+            SqlConnection connection = new SqlConnection(connectionString);
+            SqlCommand cmd = new SqlCommand(sql, connection);
+            cmd.Parameters.AddWithValue("@status", "active");
+            try
+            {
+                if (connection.State == ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (reader.Read())
+                {
+                    Product product = new Product()
+                    {
+                        ProductID = reader["product_id"].ToString(),
+                        ProductName = reader["product_name"].ToString(),
+                        Quantity = int.Parse(reader["quantity"].ToString()),
+                        Category = reader["category"].ToString(),
+                        CostSold = int.Parse(reader["costSold"].ToString()),
+                        Price = int.Parse(reader["price"].ToString()),
+                        ModifyDate = reader["dateModify"].ToString(),
+                        Status = reader["status"].ToString()
+                    };
+                    productIdList.Add(product);
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+            return productIdList;
         }
 
         public Product getProductByID(string id) {

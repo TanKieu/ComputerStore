@@ -41,3 +41,4 @@ E:\Project\ComputerStore\ComputerStore\ComputerStoreProject\ComputerStoreProject
 E:\Project\ComputerStore\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.ProductForm.resources
 W:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.ProductForm.resources
 W:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.ProductManage.resources
+W:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.frmSale.resources
