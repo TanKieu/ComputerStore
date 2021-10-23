@@ -62,10 +62,14 @@ namespace ComputerStoreProject
             {
                 flag = userDB.AddUser(UserAddOrEdit);
             }
+            else
+            {
+                flag = userDB.UpdateUser(UserAddOrEdit);
+            }
            if(flag == true)
             {
                 this.DialogResult = DialogResult.OK;
-                MessageBox.Show("Add successfully");
+                MessageBox.Show("Save successfully");
             }else
             {
                 MessageBox.Show("Save fail");

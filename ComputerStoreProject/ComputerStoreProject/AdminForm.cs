@@ -37,5 +37,11 @@ namespace ComputerStoreProject
         {
 
         }
+
+        private void btnSale_Click(object sender, EventArgs e)
+        {
+            frmSale salePro = new frmSale(user.uid);
+            salePro.Show();
+        }
     }
 }
