@@ -54,6 +54,7 @@ namespace ComputerStoreProject
             txtPrice.DataBindings.Add("Text", bsProduct, "price");
             txtCategory.DataBindings.Add("Text", bsProduct, "category");
             txtStatus.DataBindings.Add("Text", bsProduct, "status");
+            txtProductID.Enabled = false;
             dgvProduct.DataSource = bsProduct;
 
         }
@@ -93,6 +94,7 @@ namespace ComputerStoreProject
             if (r == DialogResult.OK) // cap nhat thong tin tren data table
             {
                 DataRow row = dtProduct.Rows.Find(product.ProductID);
+                product = productForm.ProductAddOrEdit;
                 row["product_name"] = product.ProductName;
                 row["quantity"] = product.Quantity;
                 row["category"] = product.Category;
@@ -144,6 +146,11 @@ namespace ComputerStoreProject
             string filter = "product_name LIKE '%" + txtNameSearch.Text + "%'";
             dv.RowFilter = filter;
             lbResult.Text = "Total result : " + dtProduct.Compute("COUNT(product_id)",filter); 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

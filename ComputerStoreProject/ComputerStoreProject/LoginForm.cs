@@ -45,10 +45,10 @@ namespace ComputerStoreProject
                         AdminForm adminForm = new AdminForm(user);
                         adminForm.Closed += (s, arg) => this.Close();
                         adminForm.Show();
-                    }else if (user.role.Contains("emp"))
+                    }else if (user.role.Contains("staff"))
                     {
-                        this.Close();
-                        EmpForm empForm = new EmpForm();
+                        this.Hide();
+                        EmpForm empForm = new EmpForm(user);
                         empForm.Show();
                     }
                 }

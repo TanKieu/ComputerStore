@@ -28,7 +28,6 @@ E:\Project\ComputerStore\ComputerStore\ComputerStoreProject\ComputerStoreProject
 E:\Project\ComputerStore\ComputerStore\ComputerStoreProject\ComputerStoreProject\bin\Debug\ComputerStoreProject.pdb
 E:\Project\ComputerStore\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.csproj.AssemblyReference.cache
 E:\Project\ComputerStore\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.AdminForm.resources
-E:\Project\ComputerStore\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.EmpForm.resources
 E:\Project\ComputerStore\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.frmUserDetails.resources
 E:\Project\ComputerStore\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.fmLogin.resources
 E:\Project\ComputerStore\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.ManageUser.resources
@@ -42,3 +41,6 @@ E:\Project\ComputerStore\ComputerStore\ComputerStoreProject\ComputerStoreProject
 W:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.ProductForm.resources
 W:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.ProductManage.resources
 W:\Semester7\PRN292\C#-Code\Again\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.frmSale.resources
+E:\Project\ComputerStore\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.frmSale.resources
+E:\Project\ComputerStore\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.BillManage.resources
+E:\Project\ComputerStore\ComputerStore\ComputerStoreProject\ComputerStoreProject\obj\Debug\ComputerStoreProject.EmpForm.resources

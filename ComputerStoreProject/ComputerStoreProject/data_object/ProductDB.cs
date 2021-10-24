@@ -1,30 +1,19 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using System.Collections;
+using System.Configuration;
 
 namespace ComputerStoreProject
 {
-    public class Product
+    public class ProductDB
     {
-        public string ProductID { get; set; }
-        public string ProductName { get; set; }
-        public int Quantity { get; set; }
-        public string Category { get; set; }
-        public int CostSold { get; set; }
-        public int Price { get; set; }
-        public string Status { get; set; }
-        public string ModifyDate { get; set; }
-    }
-
-    public class ProductDB {
         string connectionString;
-     
+
         public ProductDB()
         {
             getConnectionString();
@@ -36,7 +25,8 @@ namespace ComputerStoreProject
             return connectionString;
         }
 
-        public DataTable getAllProduct() {
+        public DataTable getAllProduct()
+        {
             string sql = "SELECT product_id, product_name,quantity,category,costSold,price,dateModify,status \n" +
                 "FROM Product";
             SqlConnection connection = new SqlConnection(connectionString);
@@ -56,14 +46,15 @@ namespace ComputerStoreProject
 
                 throw new Exception(ex.Message);
             }
-            finally {
+            finally
+            {
                 connection.Close();
             }
             return dtProduct;
         }
         public ArrayList getAllProductId()
         {
-            ArrayList productIdList= new ArrayList();
+            ArrayList productIdList = new ArrayList();
             String sql = "Select  product_id, product_name,quantity,category,costSold,price,dateModify,status From Product where status = @status";
             SqlConnection connection = new SqlConnection(connectionString);
             SqlCommand cmd = new SqlCommand(sql, connection);
@@ -100,7 +91,8 @@ namespace ComputerStoreProject
             return productIdList;
         }
 
-        public Product getProductByID(string id) {
+        public Product getProductByID(string id)
+        {
             Product product = null;
             string sql = "SELECT product_name,quantity,category,costSold,price,dateModify,status \n" +
                 "FROM Product WHERE product_id = @ProductID";
@@ -126,7 +118,7 @@ namespace ComputerStoreProject
                         Price = int.Parse(reader["price"].ToString()),
                         ModifyDate = reader["dateModify"].ToString(),
                         Status = reader["status"].ToString()
-                };
+                    };
                 }
             }
             catch (Exception ex)
@@ -179,7 +171,7 @@ namespace ComputerStoreProject
 
         public bool addProduct(Product product)
         {
-            bool result = false;   
+            bool result = false;
             string sql = "INSERT INTO Product(product_id, product_name,quantity,category,costSold,price,dateModify,status) \n" +
                 "VALUES (@ProductID,@ProductName,@Quantity,@Category,@CostSold,@Price,@DateModify,@Status)";
             SqlConnection connection = new SqlConnection(connectionString);
@@ -195,7 +187,7 @@ namespace ComputerStoreProject
 
             try
             {
-                if (connection.State == ConnectionState.Closed)
+                if (connection.State == System.Data.ConnectionState.Closed)
                 {
                     connection.Open();
                 }
@@ -207,7 +199,8 @@ namespace ComputerStoreProject
 
                 throw new Exception(ex.Message);
             }
-            finally {
+            finally
+            {
                 connection.Close();
             }
             return result;

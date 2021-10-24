@@ -59,8 +59,10 @@ namespace ComputerStoreProject
         {
             Product pro = FindPro(cbProId.Text);
             BillDetails billDetails = new  BillDetails(billID, pro.ProductID, int.Parse(numUDQuantity.Value.ToString()));
+            
             billList.Add(billDetails);
             totalCost += pro.Price* int.Parse(numUDQuantity.Value.ToString());
+            lbTotalCost.Text = "Total cost : " + totalCost + "";
             dgvOrderList.Rows.Add(pro.ProductID, pro.ProductName,pro.Price , numUDQuantity.Value);
         }
         private Product FindPro(String id)
@@ -75,6 +77,12 @@ namespace ComputerStoreProject
 
         private void btnCreateOrder_Click(object sender, EventArgs e)
         {
+            bool valid = validBill();
+            if (valid == false) {  // thiếu sản phẩm 
+                return;
+            }
+
+
             bool flag = false;
             ClientDB clientDb = new ClientDB();
             if (mtxtPhone.MaskFull)
@@ -109,6 +117,30 @@ namespace ComputerStoreProject
                 MessageBox.Show("Please Input Client Information!!!");
             }
             
+        }
+
+        private bool validBill() {
+            foreach (BillDetails billDetails in billList)
+            {
+                ProductDB productDB = new ProductDB();
+                Product pro = productDB.getProductByID(billDetails.ProductId);
+                int quantity = pro.Quantity - billDetails.quantity;
+                if (quantity < 0) {
+                    MessageBox.Show($"Out of stock (Product ID : {pro.ProductID}), cannot create new order");
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dgvOrderList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

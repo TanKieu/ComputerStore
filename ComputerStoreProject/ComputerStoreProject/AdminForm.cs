@@ -43,5 +43,12 @@ namespace ComputerStoreProject
             frmSale salePro = new frmSale(user.uid);
             salePro.Show();
         }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            fmLogin fm = new fmLogin();
+            fm.Show();
+            this.Close();
+        }
     }
 }

@@ -123,5 +123,10 @@ namespace ComputerStoreProject
             string filter = "staff_name LIKE '%" + txtSearch.Text + "%'";
             dv.RowFilter = filter;
         }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

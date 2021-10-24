@@ -60,94 +60,107 @@ namespace ComputerStoreProject
             this.cbRole = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.error = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnLogOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bnUser)).BeginInit();
             this.bnUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 39);
+            this.label1.Location = new System.Drawing.Point(43, 48);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 13);
+            this.label1.Size = new System.Drawing.Size(31, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "UID";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 69);
+            this.label2.Location = new System.Drawing.Point(43, 85);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 13);
+            this.label2.Size = new System.Drawing.Size(111, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Employee Name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 100);
+            this.label3.Location = new System.Drawing.Point(43, 123);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 13);
+            this.label3.Size = new System.Drawing.Size(37, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Role";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 130);
+            this.label4.Location = new System.Drawing.Point(43, 160);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 13);
+            this.label4.Size = new System.Drawing.Size(73, 17);
             this.label4.TabIndex = 0;
             this.label4.Text = "Username";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(32, 163);
+            this.label5.Location = new System.Drawing.Point(43, 201);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 13);
+            this.label5.Size = new System.Drawing.Size(69, 17);
             this.label5.TabIndex = 0;
             this.label5.Text = "Password";
             // 
             // txtUid
             // 
             this.txtUid.Enabled = false;
-            this.txtUid.Location = new System.Drawing.Point(161, 39);
+            this.txtUid.Location = new System.Drawing.Point(215, 48);
+            this.txtUid.Margin = new System.Windows.Forms.Padding(4);
             this.txtUid.Name = "txtUid";
-            this.txtUid.Size = new System.Drawing.Size(153, 20);
+            this.txtUid.Size = new System.Drawing.Size(203, 22);
             this.txtUid.TabIndex = 1;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(161, 69);
+            this.txtName.Location = new System.Drawing.Point(215, 85);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(153, 20);
+            this.txtName.Size = new System.Drawing.Size(203, 22);
             this.txtName.TabIndex = 1;
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(161, 127);
+            this.txtUsername.Location = new System.Drawing.Point(215, 156);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(153, 20);
+            this.txtUsername.Size = new System.Drawing.Size(203, 22);
             this.txtUsername.TabIndex = 1;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(161, 156);
+            this.txtPassword.Location = new System.Drawing.Point(215, 192);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(153, 20);
+            this.txtPassword.Size = new System.Drawing.Size(203, 22);
             this.txtPassword.TabIndex = 1;
             // 
             // dgvUserList
             // 
             this.dgvUserList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUserList.Location = new System.Drawing.Point(35, 217);
+            this.dgvUserList.Location = new System.Drawing.Point(47, 267);
+            this.dgvUserList.Margin = new System.Windows.Forms.Padding(4);
             this.dgvUserList.Name = "dgvUserList";
             this.dgvUserList.RowHeadersWidth = 51;
             this.dgvUserList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUserList.Size = new System.Drawing.Size(556, 150);
+            this.dgvUserList.Size = new System.Drawing.Size(741, 185);
             this.dgvUserList.TabIndex = 2;
             this.dgvUserList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUserList_CellContentClick);
             // 
@@ -176,7 +189,7 @@ namespace ComputerStoreProject
             this.bnUser.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bnUser.Name = "bnUser";
             this.bnUser.PositionItem = this.bindingNavigatorPositionItem;
-            this.bnUser.Size = new System.Drawing.Size(800, 27);
+            this.bnUser.Size = new System.Drawing.Size(960, 27);
             this.bnUser.TabIndex = 3;
             this.bnUser.Text = "bindingNavigator1";
             // 
@@ -186,13 +199,13 @@ namespace ComputerStoreProject
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -202,7 +215,7 @@ namespace ComputerStoreProject
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
@@ -211,7 +224,7 @@ namespace ComputerStoreProject
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -220,7 +233,7 @@ namespace ComputerStoreProject
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
@@ -234,7 +247,7 @@ namespace ComputerStoreProject
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(65, 27);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
@@ -249,7 +262,7 @@ namespace ComputerStoreProject
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -258,7 +271,7 @@ namespace ComputerStoreProject
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
@@ -268,9 +281,10 @@ namespace ComputerStoreProject
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(415, 35);
+            this.btnAdd.Location = new System.Drawing.Point(553, 43);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(86, 23);
+            this.btnAdd.Size = new System.Drawing.Size(115, 28);
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "Add New";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -278,9 +292,10 @@ namespace ComputerStoreProject
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(415, 80);
+            this.btnEdit.Location = new System.Drawing.Point(553, 98);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(86, 23);
+            this.btnEdit.Size = new System.Drawing.Size(115, 28);
             this.btnEdit.TabIndex = 4;
             this.btnEdit.Text = "Edit User";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -288,9 +303,10 @@ namespace ComputerStoreProject
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(415, 120);
+            this.btnDelete.Location = new System.Drawing.Point(553, 148);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(86, 23);
+            this.btnDelete.Size = new System.Drawing.Size(115, 28);
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Delete User";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -302,34 +318,52 @@ namespace ComputerStoreProject
             this.cbRole.Items.AddRange(new object[] {
             "staff",
             "admin"});
-            this.cbRole.Location = new System.Drawing.Point(161, 95);
+            this.cbRole.Location = new System.Drawing.Point(215, 117);
+            this.cbRole.Margin = new System.Windows.Forms.Padding(4);
             this.cbRole.Name = "cbRole";
-            this.cbRole.Size = new System.Drawing.Size(153, 21);
+            this.cbRole.Size = new System.Drawing.Size(203, 24);
             this.cbRole.TabIndex = 5;
             this.cbRole.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(376, 163);
+            this.label6.Location = new System.Drawing.Point(550, 216);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 13);
+            this.label6.Size = new System.Drawing.Size(111, 17);
             this.label6.TabIndex = 6;
             this.label6.Text = "Search by name";
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(415, 180);
+            this.txtSearch.Location = new System.Drawing.Point(553, 237);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(142, 20);
+            this.txtSearch.Size = new System.Drawing.Size(188, 22);
             this.txtSearch.TabIndex = 7;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
+            // error
+            // 
+            this.error.ContainerControl = this;
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.Location = new System.Drawing.Point(829, 46);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(102, 39);
+            this.btnLogOut.TabIndex = 8;
+            this.btnLogOut.Text = "Log out";
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
             // ManageUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(960, 554);
+            this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cbRole);
@@ -347,6 +381,7 @@ namespace ComputerStoreProject
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ManageUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManageUser";
@@ -356,6 +391,7 @@ namespace ComputerStoreProject
             this.bnUser.ResumeLayout(false);
             this.bnUser.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -392,5 +428,7 @@ namespace ComputerStoreProject
         private System.Windows.Forms.ComboBox cbRole;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.ErrorProvider error;
+        private System.Windows.Forms.Button btnLogOut;
     }
 }

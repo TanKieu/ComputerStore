@@ -29,6 +29,7 @@ namespace ComputerStoreProject
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,6 +46,8 @@ namespace ComputerStoreProject
             this.btnExit = new System.Windows.Forms.Button();
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.cbStatus = new System.Windows.Forms.ComboBox();
+            this.error = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -191,6 +194,10 @@ namespace ComputerStoreProject
             this.cbStatus.Size = new System.Drawing.Size(218, 24);
             this.cbStatus.TabIndex = 17;
             // 
+            // error
+            // 
+            this.error.ContainerControl = this;
+            // 
             // ProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -214,6 +221,8 @@ namespace ComputerStoreProject
             this.Controls.Add(this.label1);
             this.Name = "ProductForm";
             this.Text = "ProductForm";
+            this.Load += new System.EventHandler(this.ProductForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,5 +246,6 @@ namespace ComputerStoreProject
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.ComboBox cbCategory;
         private System.Windows.Forms.ComboBox cbStatus;
+        private System.Windows.Forms.ErrorProvider error;
     }
 }
