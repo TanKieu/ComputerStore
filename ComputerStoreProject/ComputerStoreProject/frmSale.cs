@@ -34,14 +34,21 @@ namespace ComputerStoreProject
         }
         private void loadData()
         {
+
             dgvOrderList.ColumnCount = 4;
             dgvOrderList.Columns[0].Name ="Product ID";
             dgvOrderList.Columns[1].Name="Product Name";
             dgvOrderList.Columns[2].Name = "Price";
             dgvOrderList.Columns[3].Name="Quantity";
+            cbProId.Items.Clear();
             foreach (Product pro in proList)
             {
                 cbProId.Items.Add(pro.ProductID);
+            }
+            dgvOrderList.Rows.Clear();
+            foreach (BillDetails bill in billList)
+            {
+                dgvOrderList.Rows.Add(bill.product.ProductID, bill.product.ProductName, bill.product.Price, bill.quantity);
             }
         }
 
@@ -54,16 +61,41 @@ namespace ComputerStoreProject
         {
 
         }
+       
 
         private void btnAddToOrder_Click(object sender, EventArgs e)
         {
             Product pro = FindPro(cbProId.Text);
-            BillDetails billDetails = new  BillDetails(billID, pro.ProductID, int.Parse(numUDQuantity.Value.ToString()));
-            
-            billList.Add(billDetails);
-            totalCost += pro.Price* int.Parse(numUDQuantity.Value.ToString());
-            lbTotalCost.Text = "Total cost : " + totalCost + "";
-            dgvOrderList.Rows.Add(pro.ProductID, pro.ProductName,pro.Price , numUDQuantity.Value);
+            BillDetails billDetails = new  BillDetails(billID, pro, int.Parse(numUDQuantity.Value.ToString()));
+            BillDetails bill = FindBillDetails(billDetails.product.ProductID);
+            if (bill != null)
+            {
+
+                bill.quantity += billDetails.quantity;
+                totalCost += billDetails.quantity * billDetails.product.Price;
+                lbTotalCost.Text= "Total cost : " + totalCost + "";
+                loadData();
+            }
+            else
+            {
+                billList.Add(billDetails);
+                totalCost += pro.Price * int.Parse(numUDQuantity.Value.ToString());
+                lbTotalCost.Text = "Total cost : " + totalCost + "";
+                dgvOrderList.Rows.Add(pro.ProductID, pro.ProductName, pro.Price, numUDQuantity.Value);
+            }
+        }
+        private BillDetails FindBillDetails(String billID)
+        {
+            BillDetails bill = null;
+            foreach (BillDetails billDetails in billList)
+            {
+                if (billDetails.product.ProductID.Equals(billID))
+                {
+                    bill = billDetails;
+                }
+            }
+            return bill;
+
         }
         private Product FindPro(String id)
         {
@@ -101,7 +133,7 @@ namespace ComputerStoreProject
                     {
                         detailsDB.insertBillDetails(billDetails);
                         ProductDB productDB = new ProductDB();
-                        Product pro = productDB.getProductByID(billDetails.ProductId);
+                        Product pro = productDB.getProductByID(billDetails.product.ProductID);
                         pro.Quantity = pro.Quantity - billDetails.quantity;
                         productDB.updateProduct(pro);
                     }
@@ -123,7 +155,7 @@ namespace ComputerStoreProject
             foreach (BillDetails billDetails in billList)
             {
                 ProductDB productDB = new ProductDB();
-                Product pro = productDB.getProductByID(billDetails.ProductId);
+                Product pro = productDB.getProductByID(billDetails.product.ProductID);
                 int quantity = pro.Quantity - billDetails.quantity;
                 if (quantity < 0) {
                     MessageBox.Show($"Out of stock (Product ID : {pro.ProductID}), cannot create new order");

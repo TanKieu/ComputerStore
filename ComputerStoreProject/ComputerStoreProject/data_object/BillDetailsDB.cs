@@ -28,7 +28,7 @@ namespace ComputerStoreProject
                 String SQL = " Insert dbo.BillDetails values(@billId, @productid, @quantity)";
                 SqlCommand cmd = new SqlCommand(SQL, cnn);
                 cmd.Parameters.AddWithValue("@billid",billDetails.OrderId );
-                cmd.Parameters.AddWithValue("@productid", billDetails.ProductId);
+                cmd.Parameters.AddWithValue("@productid", billDetails.product.ProductID);
                 cmd.Parameters.AddWithValue("@quantity", billDetails.quantity);
                 
                 try
