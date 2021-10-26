@@ -174,5 +174,19 @@ namespace ComputerStoreProject
         {
 
         }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow pro= dgvOrderList.SelectedRows[0];
+            String proId = pro.Cells["Product Id"].Value.ToString();
+
+            BillDetails bill = FindBillDetails(proId);
+            
+            billList.Remove(bill);
+            totalCost -= bill.product.Price * bill.quantity;
+            dgvOrderList.Rows.Remove(pro);
+            lbTotalCost.Text = totalCost.ToString();
+            loadData();
+        }
     }
 }

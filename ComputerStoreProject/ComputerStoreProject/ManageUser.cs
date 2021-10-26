@@ -70,7 +70,7 @@ namespace ComputerStoreProject
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            String uid = txtUid.Text;
+             String uid = txtUid.Text;
             string name = txtName.Text;
             string role = cbRole.Text;
             string username = txtUsername.Text;
