@@ -52,7 +52,7 @@ namespace ComputerStoreProject
             this.label4 = new System.Windows.Forms.Label();
             this.lbResult = new System.Windows.Forms.Label();
             this.txtNameSearch = new System.Windows.Forms.TextBox();
-            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnReturn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsProduct)).BeginInit();
             this.SuspendLayout();
@@ -237,22 +237,22 @@ namespace ComputerStoreProject
             this.txtNameSearch.TabIndex = 24;
             this.txtNameSearch.TextChanged += new System.EventHandler(this.txtNameSearch_TextChanged);
             // 
-            // btnLogout
+            // btnReturn
             // 
-            this.btnLogout.Location = new System.Drawing.Point(781, 39);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(103, 33);
-            this.btnLogout.TabIndex = 25;
-            this.btnLogout.Text = "Log out";
-            this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Click += new System.EventHandler(this.button1_Click);
+            this.btnReturn.Location = new System.Drawing.Point(781, 39);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(103, 33);
+            this.btnReturn.TabIndex = 25;
+            this.btnReturn.Text = "Main screen";
+            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.button1_Click);
             // 
             // ProductManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(905, 557);
-            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.txtNameSearch);
             this.Controls.Add(this.lbResult);
             this.Controls.Add(this.label4);
@@ -308,6 +308,6 @@ namespace ComputerStoreProject
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbResult;
         private System.Windows.Forms.TextBox txtNameSearch;
-        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnReturn;
     }
 }

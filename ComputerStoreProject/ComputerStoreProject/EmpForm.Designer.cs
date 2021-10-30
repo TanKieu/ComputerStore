@@ -75,9 +75,9 @@ namespace ComputerStoreProject
             this.lbWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbWelcome.Location = new System.Drawing.Point(415, 78);
             this.lbWelcome.Name = "lbWelcome";
-            this.lbWelcome.Size = new System.Drawing.Size(103, 38);
+            this.lbWelcome.Size = new System.Drawing.Size(104, 38);
             this.lbWelcome.TabIndex = 5;
-            this.lbWelcome.Text = "label2";
+            this.lbWelcome.Text = "Name";
             // 
             // btnOrder
             // 

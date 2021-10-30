@@ -50,5 +50,11 @@ namespace ComputerStoreProject
             fm.Show();
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            BillManage billForm = new BillManage();
+            billForm.Show();
+        }
     }
 }

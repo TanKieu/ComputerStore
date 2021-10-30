@@ -35,6 +35,7 @@ namespace ComputerStoreProject
             this.btnSale = new System.Windows.Forms.Button();
             this.lbWelcome = new System.Windows.Forms.Label();
             this.btnLogOut = new System.Windows.Forms.Button();
+            this.btnBill = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -50,8 +51,8 @@ namespace ComputerStoreProject
             // 
             // btnMngUser
             // 
-            this.btnMngUser.Location = new System.Drawing.Point(71, 228);
-            this.btnMngUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMngUser.Location = new System.Drawing.Point(252, 228);
+            this.btnMngUser.Margin = new System.Windows.Forms.Padding(4);
             this.btnMngUser.Name = "btnMngUser";
             this.btnMngUser.Size = new System.Drawing.Size(187, 52);
             this.btnMngUser.TabIndex = 1;
@@ -61,8 +62,8 @@ namespace ComputerStoreProject
             // 
             // btnMngProduct
             // 
-            this.btnMngProduct.Location = new System.Drawing.Point(380, 228);
-            this.btnMngProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMngProduct.Location = new System.Drawing.Point(470, 228);
+            this.btnMngProduct.Margin = new System.Windows.Forms.Padding(4);
             this.btnMngProduct.Name = "btnMngProduct";
             this.btnMngProduct.Size = new System.Drawing.Size(172, 52);
             this.btnMngProduct.TabIndex = 1;
@@ -73,7 +74,7 @@ namespace ComputerStoreProject
             // btnSale
             // 
             this.btnSale.Location = new System.Drawing.Point(688, 228);
-            this.btnSale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSale.Margin = new System.Windows.Forms.Padding(4);
             this.btnSale.Name = "btnSale";
             this.btnSale.Size = new System.Drawing.Size(137, 52);
             this.btnSale.TabIndex = 1;
@@ -102,18 +103,29 @@ namespace ComputerStoreProject
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
+            // btnBill
+            // 
+            this.btnBill.Location = new System.Drawing.Point(71, 226);
+            this.btnBill.Name = "btnBill";
+            this.btnBill.Size = new System.Drawing.Size(152, 53);
+            this.btnBill.TabIndex = 4;
+            this.btnBill.Text = "Manage bill";
+            this.btnBill.UseVisualStyleBackColor = true;
+            this.btnBill.Click += new System.EventHandler(this.button1_Click);
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 554);
+            this.Controls.Add(this.btnBill);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.lbWelcome);
             this.Controls.Add(this.btnSale);
             this.Controls.Add(this.btnMngProduct);
             this.Controls.Add(this.btnMngUser);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminForm";
@@ -131,5 +143,6 @@ namespace ComputerStoreProject
         private System.Windows.Forms.Button btnSale;
         private System.Windows.Forms.Label lbWelcome;
         private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.Button btnBill;
     }
 }
