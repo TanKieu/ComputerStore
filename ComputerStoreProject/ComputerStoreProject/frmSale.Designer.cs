@@ -45,6 +45,7 @@ namespace ComputerStoreProject
             this.btnCreateOrder = new System.Windows.Forms.Button();
             this.lbTotalCost = new System.Windows.Forms.Label();
             this.btnLogOut = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUDQuantity)).BeginInit();
@@ -55,10 +56,9 @@ namespace ComputerStoreProject
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(433, 58);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(325, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 54);
+            this.label1.Size = new System.Drawing.Size(112, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sales";
             // 
@@ -68,81 +68,73 @@ namespace ComputerStoreProject
             this.groupBox1.Controls.Add(this.txtClientName);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(47, 164);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(35, 133);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(391, 175);
+            this.groupBox1.Size = new System.Drawing.Size(293, 142);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Client ";
             // 
             // mtxtPhone
             // 
-            this.mtxtPhone.Location = new System.Drawing.Point(159, 102);
-            this.mtxtPhone.Margin = new System.Windows.Forms.Padding(4);
+            this.mtxtPhone.Location = new System.Drawing.Point(119, 83);
             this.mtxtPhone.Mask = "0000000000";
             this.mtxtPhone.Name = "mtxtPhone";
-            this.mtxtPhone.Size = new System.Drawing.Size(180, 22);
+            this.mtxtPhone.Size = new System.Drawing.Size(136, 20);
             this.mtxtPhone.TabIndex = 2;
             // 
             // txtClientName
             // 
-            this.txtClientName.Location = new System.Drawing.Point(159, 44);
-            this.txtClientName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtClientName.Location = new System.Drawing.Point(119, 36);
             this.txtClientName.Name = "txtClientName";
-            this.txtClientName.Size = new System.Drawing.Size(180, 22);
+            this.txtClientName.Size = new System.Drawing.Size(136, 20);
             this.txtClientName.TabIndex = 1;
             this.txtClientName.TextChanged += new System.EventHandler(this.txtClientName_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(39, 54);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(29, 44);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 17);
+            this.label3.Size = new System.Drawing.Size(64, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Client Name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 106);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(26, 86);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 17);
+            this.label2.Size = new System.Drawing.Size(67, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Client Phone";
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnRemove);
             this.groupBox2.Controls.Add(this.numUDQuantity);
             this.groupBox2.Controls.Add(this.cbProId);
             this.groupBox2.Controls.Add(this.dgvOrderList);
             this.groupBox2.Controls.Add(this.btnAddToOrder);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(469, 164);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Location = new System.Drawing.Point(352, 133);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(565, 362);
+            this.groupBox2.Size = new System.Drawing.Size(551, 294);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Order";
             // 
             // numUDQuantity
             // 
-            this.numUDQuantity.Location = new System.Drawing.Point(405, 42);
-            this.numUDQuantity.Margin = new System.Windows.Forms.Padding(4);
+            this.numUDQuantity.Location = new System.Drawing.Point(304, 34);
             this.numUDQuantity.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.numUDQuantity.Name = "numUDQuantity";
-            this.numUDQuantity.Size = new System.Drawing.Size(59, 22);
+            this.numUDQuantity.Size = new System.Drawing.Size(44, 20);
             this.numUDQuantity.TabIndex = 5;
             this.numUDQuantity.Value = new decimal(new int[] {
             1,
@@ -153,30 +145,27 @@ namespace ComputerStoreProject
             // cbProId
             // 
             this.cbProId.FormattingEnabled = true;
-            this.cbProId.Location = new System.Drawing.Point(109, 44);
-            this.cbProId.Margin = new System.Windows.Forms.Padding(4);
+            this.cbProId.Location = new System.Drawing.Point(82, 36);
             this.cbProId.Name = "cbProId";
-            this.cbProId.Size = new System.Drawing.Size(160, 24);
+            this.cbProId.Size = new System.Drawing.Size(121, 21);
             this.cbProId.Sorted = true;
             this.cbProId.TabIndex = 4;
             // 
             // dgvOrderList
             // 
             this.dgvOrderList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrderList.Location = new System.Drawing.Point(12, 150);
-            this.dgvOrderList.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvOrderList.Location = new System.Drawing.Point(9, 122);
             this.dgvOrderList.Name = "dgvOrderList";
             this.dgvOrderList.RowHeadersWidth = 51;
-            this.dgvOrderList.Size = new System.Drawing.Size(545, 185);
+            this.dgvOrderList.Size = new System.Drawing.Size(409, 150);
             this.dgvOrderList.TabIndex = 3;
             this.dgvOrderList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrderList_CellContentClick);
             // 
             // btnAddToOrder
             // 
-            this.btnAddToOrder.Location = new System.Drawing.Point(109, 94);
-            this.btnAddToOrder.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddToOrder.Location = new System.Drawing.Point(82, 76);
             this.btnAddToOrder.Name = "btnAddToOrder";
-            this.btnAddToOrder.Size = new System.Drawing.Size(139, 28);
+            this.btnAddToOrder.Size = new System.Drawing.Size(104, 23);
             this.btnAddToOrder.TabIndex = 2;
             this.btnAddToOrder.Text = "Add To Order";
             this.btnAddToOrder.UseVisualStyleBackColor = true;
@@ -185,29 +174,26 @@ namespace ComputerStoreProject
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(332, 44);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(249, 36);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 17);
+            this.label5.Size = new System.Drawing.Size(44, 13);
             this.label5.TabIndex = 0;
             this.label5.Text = "quantity";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 49);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(6, 40);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 17);
+            this.label4.Size = new System.Drawing.Size(58, 13);
             this.label4.TabIndex = 0;
             this.label4.Text = "Product ID";
             // 
             // btnCreateOrder
             // 
-            this.btnCreateOrder.Location = new System.Drawing.Point(169, 375);
-            this.btnCreateOrder.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCreateOrder.Location = new System.Drawing.Point(127, 305);
             this.btnCreateOrder.Name = "btnCreateOrder";
-            this.btnCreateOrder.Size = new System.Drawing.Size(141, 28);
+            this.btnCreateOrder.Size = new System.Drawing.Size(106, 23);
             this.btnCreateOrder.TabIndex = 3;
             this.btnCreateOrder.Text = "Create Order";
             this.btnCreateOrder.UseVisualStyleBackColor = true;
@@ -217,34 +203,45 @@ namespace ComputerStoreProject
             // 
             this.lbTotalCost.AutoSize = true;
             this.lbTotalCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotalCost.Location = new System.Drawing.Point(51, 113);
+            this.lbTotalCost.Location = new System.Drawing.Point(38, 92);
+            this.lbTotalCost.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTotalCost.Name = "lbTotalCost";
-            this.lbTotalCost.Size = new System.Drawing.Size(97, 25);
+            this.lbTotalCost.Size = new System.Drawing.Size(77, 20);
             this.lbTotalCost.TabIndex = 4;
             this.lbTotalCost.Text = "TotalCost";
             // 
             // btnLogOut
             // 
-            this.btnLogOut.Location = new System.Drawing.Point(863, 31);
+            this.btnLogOut.Location = new System.Drawing.Point(805, 30);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(130, 27);
+            this.btnLogOut.Size = new System.Drawing.Size(98, 22);
             this.btnLogOut.TabIndex = 5;
             this.btnLogOut.Text = "Main screen";
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
+            // btnRemove
+            // 
+            this.btnRemove.Location = new System.Drawing.Point(458, 122);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(75, 23);
+            this.btnRemove.TabIndex = 6;
+            this.btnRemove.Text = "Remove";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
             // frmSale
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(923, 450);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.lbTotalCost);
             this.Controls.Add(this.btnCreateOrder);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmSale";
             this.Text = "frmSale";
             this.Load += new System.EventHandler(this.frmSale_Load);
@@ -277,5 +274,6 @@ namespace ComputerStoreProject
         private System.Windows.Forms.NumericUpDown numUDQuantity;
         private System.Windows.Forms.Label lbTotalCost;
         private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.Button btnRemove;
     }
 }
