@@ -61,7 +61,6 @@ namespace ComputerStoreProject
             this.label6 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.error = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnLogOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bnUser)).BeginInit();
             this.bnUser.SuspendLayout();
@@ -245,7 +244,6 @@ namespace ComputerStoreProject
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(65, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -348,22 +346,11 @@ namespace ComputerStoreProject
             // 
             this.error.ContainerControl = this;
             // 
-            // btnLogOut
-            // 
-            this.btnLogOut.Location = new System.Drawing.Point(829, 46);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(102, 39);
-            this.btnLogOut.TabIndex = 8;
-            this.btnLogOut.Text = "Log out";
-            this.btnLogOut.UseVisualStyleBackColor = true;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
-            // 
             // ManageUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 554);
-            this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cbRole);
@@ -429,6 +416,5 @@ namespace ComputerStoreProject
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.ErrorProvider error;
-        private System.Windows.Forms.Button btnLogOut;
     }
 }

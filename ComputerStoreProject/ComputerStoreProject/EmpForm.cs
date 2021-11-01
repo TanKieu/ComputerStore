@@ -40,9 +40,10 @@ namespace ComputerStoreProject
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
+            this.Hide();
             fmLogin fm = new fmLogin();
+            fm.Closed += (s, arg) => this.Close();
             fm.Show();
-            this.Close();
         }
 
         private void EmpForm_Load(object sender, EventArgs e)
